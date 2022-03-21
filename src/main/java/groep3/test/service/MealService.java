@@ -16,9 +16,9 @@ public class MealService {
         return mealRepository.findAll();
     }
 
-    public Meal createMeal(int mealId, String mealName, double mealPrice){
-        Meal meal = new Meal(mealId, mealName, mealPrice);
-        mealRepository.save(new Meal(mealId, mealName, mealPrice));
-        return meal;
+    public Meal createMeal(Meal meal) {
+        return mealRepository.save(meal);
     }
+
+
 }

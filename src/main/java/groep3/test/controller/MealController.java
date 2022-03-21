@@ -15,23 +15,13 @@ public class MealController {
     private MealService mealService;
 
     @GetMapping("/all")
-    public List<Meal> getAll()
-    {
+    public List<Meal> getAll() {
         return mealService.getAllMeals();
     }
 
     @PostMapping("/create")
-    public Meal createMeal()
-    {
-        int mealId = 5;
-        String mealName = "david";
-        double mealPrice = 5.99;
-        return mealService.createMeal(mealId, mealName, mealPrice);
+    public Meal createMeal(@RequestBody Meal meal) {
+        return mealService.createMeal(meal);
     }
-
-//    @PutMapping("/update")
-//    public List<Meal> getAll()
-//    {
-//        return mealService.getAllMeals();
-//    }
 }
+
