@@ -8,11 +8,22 @@ import javax.persistence.Id;
 @Entity
 public class Meal {
 
+
+
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private long mealId;
+    @GeneratedValue(strategy=GenerationType.AUTO)
+    public long mealId;
 
-    private String mealName;
+    public String mealName;
 
-    private double mealPrice;
+    public double mealPrice;
+
+    public Meal() {
+    }
+
+    public Meal(int mealId, String mealName, double mealPrice) {
+        this.mealId = mealId;
+        this.mealName = mealName;
+        this.mealPrice = mealPrice;
+    }
 }
