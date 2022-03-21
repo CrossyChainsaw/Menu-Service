@@ -1,10 +1,9 @@
 package groep3.test.controller;
 import groep3.test.entities.Drink;
+import groep3.test.entities.Meal;
 import groep3.test.service.DrinkService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -19,5 +18,27 @@ public class DrinkController {
     public List<Drink> getAll()
     {
         return drinkService.getAllDrinks();
+    }
+
+    @PostMapping("/create")
+    public Drink createDrink(@RequestBody Drink drink) {
+        return drinkService.createDrink(drink);
+    }
+    /*
+    {
+        "mealId": "1",
+            "mealName": "Cheese Burger",
+            "mealPrice": 5.49
+    }
+     */
+
+    @PutMapping("/update")
+    public Drink updateDrink(@RequestBody Drink drink) {
+        return drinkService.updateDrink(drink);
+    }
+
+    @DeleteMapping("/delete/{id}")
+    public void deleteDrink(@PathVariable("id") long id){
+        drinkService.deleteDrinkById(id);
     }
 }

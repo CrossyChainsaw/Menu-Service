@@ -20,5 +20,11 @@ public class MealService {
         return mealRepository.save(meal);
     }
 
+    public Meal updateMeal(Meal meal) {
+        return mealRepository.save(meal);
+    }
 
+    public void deleteMealById(long id) {
+        mealRepository.deleteById(id);
+    }
 }

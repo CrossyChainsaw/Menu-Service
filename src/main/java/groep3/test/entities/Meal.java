@@ -15,7 +15,6 @@ import javax.persistence.Id;
 @NoArgsConstructor
 public class Meal {
 
-
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
 

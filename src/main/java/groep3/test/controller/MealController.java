@@ -23,5 +23,22 @@ public class MealController {
     public Meal createMeal(@RequestBody Meal meal) {
         return mealService.createMeal(meal);
     }
+    /*
+    {
+        "mealId": "1",
+            "mealName": "Cheese Burger",
+            "mealPrice": 5.49
+    }
+     */
+
+    @PutMapping("/update")
+    public Meal updateMeal(@RequestBody Meal meal) {
+        return mealService.updateMeal(meal);
+    }
+
+    @DeleteMapping("/delete/{id}")
+    public void deleteMapping(@PathVariable("id") long id){
+        mealService.deleteMealById(id);
+    }
 }
 

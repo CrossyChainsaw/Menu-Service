@@ -13,7 +13,19 @@ public class DrinkService {
     @Autowired
     private DrinkRepository drinkRepository;
 
-    public List<Drink> getAllDrinks(){
+    public List<Drink> getAllDrinks() {
         return drinkRepository.findAll();
+    }
+
+    public Drink createDrink(Drink drink) {
+        return drinkRepository.save(drink);
+    }
+
+    public Drink updateDrink(Drink drink) {
+        return drinkRepository.save(drink);
+    }
+
+    public void deleteDrinkById(long id) {
+        drinkRepository.deleteById(id);
     }
 }
