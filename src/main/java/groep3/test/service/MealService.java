@@ -15,4 +15,10 @@ public class MealService {
     public List<Meal> getAllMeals(){
         return mealRepository.findAll();
     }
+
+    public Meal createMeal(int mealId, String mealName, double mealPrice){
+        Meal meal = new Meal(mealId, mealName, mealPrice);
+        mealRepository.save(new Meal(mealId, mealName, mealPrice));
+        return meal;
+    }
 }
