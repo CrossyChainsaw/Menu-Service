@@ -7,9 +7,12 @@ import javax.persistence.Id;
 
 @Entity
 public class Meal {
+
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private int mealId;
+    private long mealId;
+
     private String mealName;
+
     private double mealPrice;
 }
