@@ -23,4 +23,6 @@ public class Meal {
     public String mealName;
 
     public double mealPrice;
+
+    public long CategoryId;
 }

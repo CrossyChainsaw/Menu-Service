@@ -24,13 +24,6 @@ public class DrinkController {
     public Drink createDrink(@RequestBody Drink drink) {
         return drinkService.createDrink(drink);
     }
-    /*
-    {
-        "mealId": "1",
-            "mealName": "Cheese Burger",
-            "mealPrice": 5.49
-    }
-     */
 
     @PutMapping("/update")
     public Drink updateDrink(@RequestBody Drink drink) {

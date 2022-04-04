@@ -11,18 +11,13 @@ import javax.persistence.Id;
 
 @Entity
 @Data
-@AllArgsConstructor
 @NoArgsConstructor
-public class Drink {
+@AllArgsConstructor
+public class Category {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
+    public Long CategoryId;
 
-    public long drinkId;
-
-    public String drinkName;
-
-    public double drinkPrice;
-
-    public long CategoryId;
+    public String CategoryName;
 }
