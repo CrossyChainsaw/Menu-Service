@@ -22,6 +22,8 @@ public class Meal {
 
     public String mealName;
 
+    public String imgSrc;
+
     public double mealPrice;
 
     public long CategoryId;

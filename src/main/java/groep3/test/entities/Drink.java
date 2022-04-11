@@ -22,6 +22,8 @@ public class Drink {
 
     public String drinkName;
 
+    public String imgSrc;
+
     public double drinkPrice;
 
     public long CategoryId;

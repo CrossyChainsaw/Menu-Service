@@ -8,9 +8,11 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
+@CrossOrigin
 @RequestMapping("/meals")
 public class MealController {
 
+    // constructor ipv autowired is testable
     @Autowired
     private MealService mealService;
 
