@@ -17,6 +17,7 @@ public class MenuServiceApplication {
 	 INSERT INTO `groep3`.`meal` (`meal_id`, `category_id`, `img_src`, `meal_name`, `meal_price`) VALUES ('4', '3', 'https://www.receptenkoken.nl/wp-content/uploads/2016/10/Tiramisu-1.jpg', 'Tiramisu', '4.99');
 	 INSERT INTO `groep3`.`meal` (`meal_id`, `category_id`, `img_src`, `meal_name`, `meal_price`) VALUES ('5', '3', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBYhGMsDsUhFHFul6lZx8cfvh1q-aw5Y1MmQ&usqp=CAU', 'Cheesecake', '4.49');
 
+//lol
 
 	 INSERT INTO `groep3`.`category` (`category_id`, `category_name`) VALUES ('1', 'Voorgerecht');
 	 INSERT INTO `groep3`.`category` (`category_id`, `category_name`) VALUES ('2', 'Hoofgerecht');
