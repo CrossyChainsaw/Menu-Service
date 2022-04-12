@@ -22,7 +22,7 @@ public class Drink {
 
     public String drinkName;
 
-    public String imgSrc;
+    public String img_Src;
 
     public double drinkPrice;
 
