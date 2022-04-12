@@ -16,7 +16,7 @@ import javax.persistence.Id;
 public class Drink {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
 
     public long drinkId;
 
