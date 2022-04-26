@@ -1,6 +1,6 @@
 package groep3.test.controller;
+
 import groep3.test.entities.Drink;
-import groep3.test.entities.Meal;
 import groep3.test.service.DrinkService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -16,8 +16,7 @@ public class DrinkController {
     private DrinkService drinkService;
 
     @GetMapping("/all")
-    public List<Drink> getAll()
-    {
+    public List<Drink> getAll() {
         return drinkService.getAllDrinks();
     }
 
@@ -32,7 +31,7 @@ public class DrinkController {
     }
 
     @DeleteMapping("/delete/{id}")
-    public void deleteDrink(@PathVariable("id") long id){
+    public void deleteDrink(@PathVariable("id") long id) {
         drinkService.deleteDrinkById(id);
     }
 }
