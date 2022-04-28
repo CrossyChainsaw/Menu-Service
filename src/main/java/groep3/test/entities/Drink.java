@@ -26,5 +26,5 @@ public class Drink {
 
     public double drinkPrice;
 
-    public long CategoryId;
+    public long categoryId;
 }

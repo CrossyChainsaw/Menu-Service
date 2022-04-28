@@ -3,6 +3,7 @@ import groep3.test.entities.Category;
 import groep3.test.service.CategoryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 
 import java.util.List;
 
@@ -25,7 +26,7 @@ public class CategoryController {
         return categoryService.createCategory(category);
     }
 
-    @PutMapping("/update")
+    @PutMapping("/update/{id}")
     public Category updateCategory(@RequestBody Category category) {
         return categoryService.updateCategory(category);
     }

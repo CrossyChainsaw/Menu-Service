@@ -26,5 +26,5 @@ public class Meal {
 
     public double mealPrice;
 
-    public long CategoryId;
+    public long categoryId;
 }

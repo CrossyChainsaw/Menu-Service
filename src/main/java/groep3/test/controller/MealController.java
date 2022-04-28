@@ -25,9 +25,8 @@ public class MealController {
         return mealService.createMeal(meal);
     }
 
-    @PutMapping("/update")
-    public Meal updateMeal(@RequestBody Meal meal) {
-        return mealService.updateMeal(meal);
+    @PutMapping("/update/{id}")
+    public Meal updateMeal(@RequestBody Meal meal) {  return mealService.updateMeal(meal);
     }
 
     @DeleteMapping("/delete/{id}")

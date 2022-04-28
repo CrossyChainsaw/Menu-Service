@@ -25,7 +25,7 @@ public class DrinkController {
         return drinkService.createDrink(drink);
     }
 
-    @PutMapping("/update")
+    @PutMapping("/update/{id}")
     public Drink updateDrink(@RequestBody Drink drink) {
         return drinkService.updateDrink(drink);
     }
