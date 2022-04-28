@@ -1,7 +1,7 @@
 # This workflow will build a Java project with Maven, and cache/restore any dependencies to improve the workflow execution time
 # For more information see: https://help.github.com/actions/language-and-framework-guides/building-and-testing-java-with-maven
 
-name: Build and test Spring boot application
+name: Project cicd flow
 
 on:
   push:
@@ -10,11 +10,12 @@ on:
     branches: [ master ]
 
 jobs:
-
-
-  compile:
+  build:
+    env:
+      DB_DATABASE: groep3
+      DB_USER: root
+      DB_PASSWORD: root
     runs-on: ubuntu-latest
-    name: Running Java
 
     steps:
       - uses: actions/checkout@v3
@@ -24,18 +25,11 @@ jobs:
           java-version: '11'
           distribution: 'temurin'
           cache: maven
-
-  test:
-    runs-on: ubuntu-latest
-    name: Build with Maven
-    needs: compile
-    steps:
-      - uses: actions/checkout@v3
-      - name: Add secrets to tests
-      run: printf ${{secrets.SPRING_DATASOURCE_PASSWORD}} >> src/main/resources/application.properties
-      shell: bash
-
-        - name: install maven
-          run: mvn clean install
-        - name: Test with Maven
-          run: mvn -B test
+      - name: Set up MySQL
+        run: |
+          sudo /etc/init.d/mysql start
+          mysql -e 'CREATE DATABASE ${{ env.DB_DATABASE }};' -u${{ env.DB_USER }} -p${{ env.DB_PASSWORD }}
+      - name: Build with Maven
+        run: mvn clean install
+      - name: Test with Maven
+        run: mvn -B test
