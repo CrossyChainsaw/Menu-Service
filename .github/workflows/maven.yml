@@ -5,7 +5,7 @@ name: Build menu service and test it
 
 on:
   push:
-    branches: [ master ]
+    branches: [ master, Tests ]
   pull_request:
     branches: [ master ]
 
