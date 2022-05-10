@@ -1,9 +1,9 @@
 package groep3.test.controller;
+
 import groep3.test.entities.Category;
 import groep3.test.service.CategoryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 
 import java.util.List;
 
@@ -16,8 +16,7 @@ public class CategoryController {
     private CategoryService categoryService;
 
     @GetMapping("/all")
-    public List<Category> getAll()
-    {
+    public List<Category> getAll() {
         return categoryService.getAllCategories();
     }
 
@@ -32,7 +31,7 @@ public class CategoryController {
     }
 
     @DeleteMapping("/delete/{id}")
-    public void deleteCategory(@PathVariable("id") long id){
+    public void deleteCategory(@PathVariable("id") long id) {
         categoryService.deleteCategoryById(id);
     }
 }
