@@ -40,8 +40,8 @@ public class CategoryControllerTest {
     @Test
     void shouldPostCategory() throws Exception {
         Category postCategory = new Category();
-        postCategory.categoryId = 1L;
-        postCategory.categoryName = "Voorgerecht";
+        postCategory.ID = 1L;
+        postCategory.name = "Voorgerecht";
 
         String categoryAsString = mapper.writeValueAsString(postCategory);
 
@@ -68,8 +68,8 @@ public class CategoryControllerTest {
     void shouldUpdateCategoryById() throws Exception
     {
         Category putCategory = new Category();
-        putCategory.categoryId = 1L;
-        putCategory.categoryName = "Voorgerecht";
+        putCategory.ID = 1L;
+        putCategory.name = "Voorgerecht";
 
         String categoryAsString = mapper.writeValueAsString(putCategory);
 

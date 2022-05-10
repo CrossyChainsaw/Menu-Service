@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 @CrossOrigin
@@ -26,12 +27,20 @@ public class MealController {
     }
 
     @PutMapping("/update/{id}")
-    public Meal updateMeal(@RequestBody Meal meal) {  return mealService.updateMeal(meal);
+    public Meal updateMeal(@RequestBody Meal meal) {
+        return mealService.updateMeal(meal);
     }
 
     @DeleteMapping("/delete/{id}")
     public void deleteMapping(@PathVariable("id") long id){
         mealService.deleteMealById(id);
+    }
+
+    @GetMapping("/getByID/{id}")
+    public Optional<Meal> getByID(@PathVariable("id") long ID) {
+        Optional<Meal> meal = mealService.getByID(ID);
+        System.out.print(meal);
+        return meal;
     }
 }
 

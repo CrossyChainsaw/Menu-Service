@@ -43,11 +43,11 @@ public class DrinkControllerTest {
     @Test
     void shouldPostDrink() throws Exception {
         Drink postDrink = new Drink();
-        postDrink.drinkId = 1;
-        postDrink.drinkName = "Coca Cola";
-        postDrink.img_Src = "https://www.shinzo.nl/wp-content/uploads/2020/05/cocacola.png";
-        postDrink.drinkPrice = 2.49;
-        postDrink.categoryId = 4;
+        postDrink.ID = 1;
+        postDrink.name = "Coca Cola";
+        postDrink.image = "https://www.shinzo.nl/wp-content/uploads/2020/05/cocacola.png";
+        postDrink.price = 2.49;
+        postDrink.categoryID = 4;
 
         String drinkAsString = mapper.writeValueAsString(postDrink);
 
@@ -77,11 +77,11 @@ public class DrinkControllerTest {
     void shouldUpdateDrinkById() throws Exception
     {
         Drink putDrink = new Drink();
-        putDrink.drinkId = 1;
-        putDrink.drinkName = "Coca Cola";
-        putDrink.img_Src = "https://www.shinzo.nl/wp-content/uploads/2020/05/cocacola.png";
-        putDrink.drinkPrice = 2.49;
-        putDrink.categoryId = 4;
+        putDrink.ID = 1;
+        putDrink.name = "Coca Cola";
+        putDrink.image = "https://www.shinzo.nl/wp-content/uploads/2020/05/cocacola.png";
+        putDrink.price = 2.49;
+        putDrink.categoryID = 4;
 
         String drinkAsString = mapper.writeValueAsString(putDrink);
 

@@ -18,13 +18,13 @@ public class Drink {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
 
-    public long drinkId;
+    public long ID;
 
-    public String drinkName;
+    public String name;
 
-    public String img_Src;
+    public String image;
 
-    public double drinkPrice;
+    public double price;
 
-    public long categoryId;
+    public long categoryID;
 }
