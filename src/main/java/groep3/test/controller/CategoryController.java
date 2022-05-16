@@ -9,28 +9,28 @@ import java.util.List;
 
 @RestController
 @CrossOrigin
-@RequestMapping("/categories")
+@RequestMapping("/api/v1")
 public class CategoryController {
 
     @Autowired
     private CategoryService categoryService;
 
-    @GetMapping("/all")
+    @GetMapping("/category/all")
     public List<Category> getAll() {
         return categoryService.getAllCategories();
     }
 
-    @PostMapping("/create")
+    @PostMapping("/category/create")
     public Category createCategory(@RequestBody Category category) {
         return categoryService.createCategory(category);
     }
 
-    @PutMapping("/update/{id}")
+    @PutMapping("/category/{id}")
     public Category updateCategory(@RequestBody Category category) {
         return categoryService.updateCategory(category);
     }
 
-    @DeleteMapping("/delete/{id}")
+    @DeleteMapping("/category/{id}")
     public void deleteCategory(@PathVariable("id") long id) {
         categoryService.deleteCategoryById(id);
     }
